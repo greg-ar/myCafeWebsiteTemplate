@@ -1,34 +1,26 @@
 import { ThemeProvider } from '@emotion/react';
-import './App.css';
-import Header from './Components/Header/Header';
 import { createTheme, CssBaseline } from '@mui/material';
-import NavBar from './Components/NavBar/NavBar';
-import PageContent from './Components/PageContent/PageContent';
+import BrowserApp from './BrowserApp/BrowserApp';
+
 
 const myTheme = createTheme({
   palette: {
-    mode: 'light',
+    type: 'light',
     primary: {
-      main: '#000000',
+      main: '#3e2723',
     },
     secondary: {
-      main: '#26c6da',
+      main: '#009688',
     },
   },
 });
 
-
 function App() {
   return (
-    <div className="App">
+    <div>
       <ThemeProvider theme={myTheme} >
         <CssBaseline />
-        <Header 
-          title="My Cafe"
-          subtitle="Your Coffee, our Specialty"
-        />
-        <NavBar />
-        <PageContent />
+        <BrowserApp />
       </ThemeProvider>  
     </div>
     

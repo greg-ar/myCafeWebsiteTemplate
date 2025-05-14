@@ -1,0 +1,109 @@
+{
+    "chef":{
+        "name":"John",
+        "surname":"Doe"
+    },
+
+    "categories": [
+      {
+        "name": "Coffee",
+        "items": [
+          {
+            "name": "Espresso",
+            "description": "Rich and bold single shot of espresso.",
+            "price": 2.50
+          },
+          {
+            "name": "Cappuccino",
+            "description": "Espresso with steamed milk and foam.",
+            "price": 3.75
+          },
+          {
+            "name": "Iced Latte",
+            "description": "Chilled espresso with cold milk and ice.",
+            "price": 4.00
+          }
+        ]
+      },
+      {
+        "name": "Tea",
+        "items": [
+          {
+            "name": "English Breakfast Tea",
+            "description": "Classic black tea served hot.",
+            "price": 2.25
+          },
+          {
+            "name": "Chai Latte",
+            "description": "Spiced tea blend with steamed milk.",
+            "price": 3.50
+          },
+          {
+            "name": "Green Tea",
+            "description": "Fresh and soothing green tea.",
+            "price": 2.75
+          }
+        ]
+      },
+      {
+        "name": "Breakfast",
+        "items": [
+          {
+            "name": "Avocado Toast",
+            "description": "Toasted sourdough with smashed avocado and chili flakes.",
+            "price": 6.50
+          },
+          {
+            "name": "Pancakes",
+            "description": "Stack of fluffy pancakes with maple syrup.",
+            "price": 7.00
+          },
+          {
+            "name": "Breakfast Sandwich",
+            "description": "Egg, bacon, and cheese on a toasted bun.",
+            "price": 5.95
+          }
+        ]
+      },
+      {
+        "name": "Lunch",
+        "items": [
+          {
+            "name": "Grilled Chicken Sandwich",
+            "description": "Chicken breast with lettuce, tomato, and mayo on ciabatta.",
+            "price": 8.75
+          },
+          {
+            "name": "Quinoa Salad",
+            "description": "Quinoa, cucumber, cherry tomatoes, and feta with lemon dressing.",
+            "price": 7.50
+          },
+          {
+            "name": "Tomato Basil Soup",
+            "description": "Creamy tomato soup served with croutons.",
+            "price": 5.00
+          }
+        ]
+      },
+      {
+        "name": "Desserts",
+        "items": [
+          {
+            "name": "Chocolate Brownie",
+            "description": "Rich chocolate brownie with walnuts.",
+            "price": 3.25
+          },
+          {
+            "name": "Cheesecake",
+            "description": "Classic New York style cheesecake.",
+            "price": 4.50
+          },
+          {
+            "name": "Croissant",
+            "description": "Buttery and flaky French pastry.",
+            "price": 2.75
+          }
+        ]
+      }
+    ]
+}

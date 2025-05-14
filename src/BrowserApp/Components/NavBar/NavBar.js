@@ -41,6 +41,7 @@ export default function NavBar(){
         <AppBar 
             position="static"
             sx={{
+                height:'50px',
                 display:'flex',
                 justifyContent:'center',
                 alignItems:'center',
