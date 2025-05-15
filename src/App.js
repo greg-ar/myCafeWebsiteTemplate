@@ -1,6 +1,8 @@
 import { ThemeProvider } from '@emotion/react';
 import { createTheme, CssBaseline } from '@mui/material';
 import BrowserApp from './BrowserApp/BrowserApp';
+import MediaQuery from 'react-responsive';
+import MobileApp from './MobileApp/MobileApp';
 
 
 const myTheme = createTheme({
@@ -15,12 +17,19 @@ const myTheme = createTheme({
   },
 });
 
+const MOBILE_WIDTH = 1224
+
 function App() {
   return (
-    <div>
+    <div className='App'>
       <ThemeProvider theme={myTheme} >
         <CssBaseline />
-        <BrowserApp />
+        <MediaQuery minWidth={MOBILE_WIDTH}>
+          <BrowserApp />
+        </MediaQuery>
+        <MediaQuery maxWidth={MOBILE_WIDTH}>
+          <MobileApp />
+        </MediaQuery>
       </ThemeProvider>  
     </div>
     

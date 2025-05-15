@@ -4,7 +4,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import socials from '../../../../../data/socials.json';
 
-export default function ContactPage(){
+export default function MobileContactPage(){
 
     function handleCall(){
         window.location.href = `tel:${socials.tel}`;
@@ -17,28 +17,23 @@ export default function ContactPage(){
     return(
        <Box 
             sx={{
-                mt:2
+                mt:7
             }}
             display="flex"
             flexDirection="column"
             alignItems="center"
        >
-            <Typography>Contact Us!</Typography>
+            <Typography>Επικοινωνήστε μαζί μας!</Typography>
             <List>
-                {socials?.tel && 
                 <ListItem>
                     <Button variant="contained" startIcon={<PhoneIcon />} onClick={handleCall}>{socials.tel}</Button>
-                </ListItem>}
-
-                {socials?.instagram &&
+                </ListItem>
                 <ListItem>
                     <Button variant="contained" startIcon={<InstagramIcon />} onClick={()=>handleClick(socials.instagram.url)} sx={{textTransform:'none'}}>{socials.instagram.handle}</Button>
-                </ListItem>}
-
-                {socials?.facebook &&
+                </ListItem>
                 <ListItem>
-                    <Button variant="contained" startIcon={<FacebookIcon />} onClick={()=>handleClick(socials.facebook.url)} sx={{textTransform:'none'}}>{socials.facebook.pagename}</Button>
-                </ListItem>}
+                <Button variant="contained" startIcon={<FacebookIcon />} onClick={()=>handleClick(socials.facebook.url)} sx={{textTransform:'none'}}>Del Mar Porto Rafti</Button>
+                </ListItem>
             </List>
        </Box>
        );

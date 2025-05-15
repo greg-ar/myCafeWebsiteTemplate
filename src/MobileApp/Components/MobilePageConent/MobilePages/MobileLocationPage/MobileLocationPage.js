@@ -4,7 +4,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import socials from '../../../../../data/socials.json';
 
-export default function ContactPage(){
+export default function MobileContactPage(){
 
     function handleCall(){
         window.location.href = `tel:${socials.tel}`;
@@ -17,7 +17,7 @@ export default function ContactPage(){
     return(
        <Box 
             sx={{
-                mt:2
+                mt:7
             }}
             display="flex"
             flexDirection="column"

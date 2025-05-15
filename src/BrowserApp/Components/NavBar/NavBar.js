@@ -1,6 +1,7 @@
 import { AppBar, Button, Toolbar } from "@mui/material";
 import { useLocation, useNavigate } from "react-router";
 import { pages } from "../PageContent/Pages/pages";
+import { useEffect, useState } from "react";
 
 
 function NavButton({page}){
@@ -37,14 +38,27 @@ function NavButton({page}){
 }
 
 export default function NavBar(){
+
+    const [isSticky, setIsSticky] = useState(false);
+
+    useEffect(function(){
+        const handleScroll = () => {
+            setIsSticky(window.scrollY >= 150); 
+          };
+      
+          window.addEventListener('scroll', handleScroll);
+      
+          return () => window.removeEventListener('scroll', handleScroll);
+    },[])
+
     return(
         <AppBar 
-            position="static"
+            position={isSticky?"fixed":"static"}
             sx={{
-                height:'50px',
                 display:'flex',
                 justifyContent:'center',
                 alignItems:'center',
+                height:'50px'
             }}
         >
             <Toolbar>
