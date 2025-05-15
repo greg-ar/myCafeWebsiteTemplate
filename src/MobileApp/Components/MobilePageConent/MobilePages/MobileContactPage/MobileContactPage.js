@@ -23,17 +23,22 @@ export default function MobileContactPage(){
             flexDirection="column"
             alignItems="center"
        >
-            <Typography>Επικοινωνήστε μαζί μας!</Typography>
+            <Typography>Contact Us</Typography>
             <List>
+                {socials?.tel && 
                 <ListItem>
                     <Button variant="contained" startIcon={<PhoneIcon />} onClick={handleCall}>{socials.tel}</Button>
-                </ListItem>
+                </ListItem>}
+
+                {socials?.instagram &&
                 <ListItem>
                     <Button variant="contained" startIcon={<InstagramIcon />} onClick={()=>handleClick(socials.instagram.url)} sx={{textTransform:'none'}}>{socials.instagram.handle}</Button>
-                </ListItem>
+                </ListItem>}
+
+                {socials?.facebook &&
                 <ListItem>
-                <Button variant="contained" startIcon={<FacebookIcon />} onClick={()=>handleClick(socials.facebook.url)} sx={{textTransform:'none'}}>Del Mar Porto Rafti</Button>
-                </ListItem>
+                    <Button variant="contained" startIcon={<FacebookIcon />} onClick={()=>handleClick(socials.facebook.url)} sx={{textTransform:'none'}}>{socials.facebook.pagename}</Button>
+                </ListItem>}
             </List>
        </Box>
        );
